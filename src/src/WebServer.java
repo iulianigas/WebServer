@@ -17,7 +17,9 @@ public class WebServer extends Thread{
     @Override
     public void run() {
         // we manage our particular client connection
-        BufferedReader in = null; PrintWriter out = null; BufferedOutputStream dataOut = null;
+        BufferedReader in = null; 
+        PrintWriter out = null; 
+        BufferedOutputStream dataOut = null;
         String fileRequested = null;
 
         try {
@@ -205,7 +207,7 @@ public class WebServer extends Thread{
         byte[] fileData = readFileData(file, fileLength);
 
         out.println("HTTP/1.1 404 File Not Found");
-        out.println("Server: Java HTTP Server from SSaurel : 1.0");
+        out.println("Server: Java HTTP Server");
         out.println("Date: " + new Date());
         out.println("Content-type: " + content);
         out.println("Content-length: " + fileLength);

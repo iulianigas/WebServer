@@ -14,8 +14,8 @@ import static java.lang.Integer.parseInt;
 public class MyWebServer extends Thread{
 
     protected Socket clientSocket;
+    
     static Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-
 
     public static void main(String[] args) throws IOException {
         ConfigManager configManager = new ConfigManager(new Configuration());
